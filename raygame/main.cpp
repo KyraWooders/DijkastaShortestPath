@@ -10,6 +10,49 @@
 ********************************************************************************************/
 
 #include "raylib.h"
+#include <vector>
+
+struct Node;
+
+struct Edge
+{
+	Node* target;
+	float cost;
+};
+
+struct Node
+{
+	Vector2 position;
+
+	float gScore;
+	Node* previous;
+
+	std::vector<Edge> connections;
+};
+
+void dijkstrasSearch(Node* startNode, Node* endNode)
+{
+	if (startNode == nullptr || endNode == nullptr)
+	{
+		return;
+	}
+
+	if (startNode == endNode)
+	{
+		return;
+	}
+
+	startNode->gScore = 0;
+	startNode->previous = nullptr;
+
+	std::vector<Node*> openList;
+	std::vector<Node*> closedList;
+
+	openList.push_back(startNode);
+
+}
+
+
 
 int main()
 {
