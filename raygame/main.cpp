@@ -56,7 +56,6 @@ std::vector<Node*> dijkstrasSearch(Node* startNode, Node* endNode)
 
 	while (!openList.empty()) 
 	{
-		//std::sort(openList.begin(), openList.end());
 		Node* currentNode = openList.front();
 
 		//If we visit the endNode, then we can exit
